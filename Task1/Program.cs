@@ -6,6 +6,7 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
 */
 
+//Функция запрашивает ввод числа и возвращает его.
 int GetIntFromConsole()
 {
     int console_int = 0;
@@ -26,3 +27,11 @@ int GetIntFromConsole()
     return console_int;
 
 }
+//Функция возвращает строку с натуральными числами от n до 1
+string PrintNaturalNumbers(int n)
+{
+    if(n == 1) return "1";
+    return $"{n} {PrintNaturalNumbers(n-1)}";
+}
+
+Console.WriteLine(  PrintNaturalNumbers(    GetIntFromConsole() )   );
